@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Tarefa}
+import { Tarefa } from '../models/tarefa.model';
 
 @Injectable({
   providedIn: 'root'
