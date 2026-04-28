@@ -1,1 +1,30 @@
-<p>tarefa-form works!</p>
+<div class="container">
+  <h1>{{ isEdicao ? 'Editar Tarefa' : 'Nova Tarefa' }}</h1>
+
+  <form (ngSubmit)="salvar()">
+
+    <div>
+      <label>Título</label>
+      <input type="text" [(ngModel)]="tarefa.titulo" name="titulo" required />
+    </div>
+
+    <div>
+      <label>Descrição</label>
+      <textarea [(ngModel)]="tarefa.descricao" name="descricao"></textarea>
+    </div>
+
+    <div>
+      <label>Status</label>
+      <select [(ngModel)]="tarefa.status" name="status">
+        <option value="Pendente">Pendente</option>
+        <option value="Concluída">Concluída</option>
+      </select>
+    </div>
+
+    <div>
+      <button type="submit">Salvar</button>
+      <button type="button" (click)="cancelar()">Cancelar</button>
+    </div>
+
+  </form>
+</div>
